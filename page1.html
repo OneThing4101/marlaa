@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday❤</title>
+    <style>
+        body {
+           margin: 0;
+           padding: 0;
+           height: 100vh;
+           background: url('image.jpg') no-repeat center center fixed;
+           background-size: cover; /* 🎯 Зургийг дэлгэцийн хэмжээнд тааруулна */
+           font-family: 'Segoe UI', sans-serif;
+           color: white;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           text-align: center;
+           flex-direction: column;
+    }
+
+
+        .card {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #ffccff;
+        }
+
+        p {
+            font-size: 1.3em;
+            line-height: 1.6;
+        }
+
+        .heart {
+            font-size: 2em;
+            animation: pulse 1.5s infinite;
+            color: pink;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: hotpink;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <audio id="bgMusic" autoplay loop style="display: none;">
+        <source src="apocalypse.mp3" type="audio/mpeg">
+    </audio>  
+
+    <div class="card">
+        <h1>Төрсөн өдрийн мэнд 😊❤</h1>
+        <p>
+            Энэ өдөр бол зүгээр ч нэг өдөр биш, чиний инээмсэглэл дэлхийд ирсэн өдөр!<br>
+            Чамд бүхнээс илүү аз жаргал, инээд хөөр, хайр баяр баяслыг хүсэж байна.<br>
+            Чи миний ертөнц, миний аз жаргал, миний шалтгаан...<br><br>
+            <span class="heart">❤️ 🤍 ❤️ </span>
+        </p>
+        <button class="button" onclick="window.location.href=''">
+            Дарж үзээрэй 😘
+        </button>        
+    </div>
+</body>
+</html>

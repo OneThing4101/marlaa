@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For you i would</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle, #fd9faa, #d35667);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      margin-top: 50px;
+      font-size: 3em;
+      color: #fff;
+      text-shadow: 0 0 10px #ffcccb, 0 0 20px #ff80ab;
+    }
+
+    .hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 10s infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -15px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -15px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        bottom: -10%;
+        left: calc(100% * var(--i));
+        opacity: 0;
+        transform: translateY(0) scale(0.5) rotate(45deg);
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        bottom: 110%;
+        left: calc(100% * var(--i) + 10px);
+        opacity: 0;
+        transform: translateY(-100px) scale(1.5) rotate(45deg);
+      }
+    }
+
+    .links {
+      margin-top: 100px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 10px;
+      font-size: 1.3em;
+      color: white;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 10px 25px;
+      border-radius: 15px;
+      backdrop-filter: blur(4px);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .links a:hover {
+      background: rgba(255, 255, 255, 0.4);
+      transform: scale(1.1);
+      color: #ffebee;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+      .links a {
+        font-size: 1em;
+        padding: 8px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🍀Marlaad zoriulsan websited tawtai moril😇
+    <br>ene web bol dunguj ehlel tsaashda iluu goy zuils zunduu uzeh baihdaa🫢
+  <h1>start-aas ehleerei😉</h1>
+
+  <div class="links">
+    <a href="start.html">Start🎀</a>
+    <a href="special.html">Special Page</a>
+    <a href="choijoo.html">Choijoo</a>
+    <a href="page1.html">Page 1</a>
+    <a href="page2.html">Page 2</a>
+    <a href="page3.html">Page 3</a>
+    <a href="page4.html">Page 4</a>
+    <a href="page5.html">Page 5</a>
+  </div>
+
+  <div class="hearts"></div>
+
+  <script>
+    const heartsContainer = document.querySelector('.hearts');
+    for (let i = 0; i < 30; i++) {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.setProperty('--i', Math.random().toFixed(2));
+      heart.style.left = Math.random() * 100 + '%';
+      heart.style.animationDuration = 5 + Math.random() * 5 + 's';
+      heartsContainer.appendChild(heart);
+    }
+  </script>
+</body>
+</html>

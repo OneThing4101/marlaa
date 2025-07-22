@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Someone Special 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="container page">
+    <!-- Hero + Music Player -->
+    <audio id="bgMusic" src="music/yellow.mp3"></audio>
+    <div class="hero-container" style="overflow:hidden; border-radius:16px;">
+      <img class="hero" src="images/Marlaa.png" alt="Her lovely photo" style="width:100%;">
+      <div class="play-btn" onclick="togglePlay()"></div>
+    </div>
+    <!-- quote -->
+    <div class="music-title">🎵You are my Favorite song's owner ✨</div>
+    <!-- Gallery -->
+    <div class="side-images">
+      <!-- Repeat for each image -->
+      <div class="side"><img src="images/Young.png"><p>Bi Gwan Sik шиг...</p></div>
+      <!-- ... бусад side элементүүд -->
+    </div>
+    <button class="letter-btn button" onclick="showLetter()">Read My Heart 💌</button>
+    <div class="letter" id="letter">
+      <h2>My Dearest Love🎀</h2>
+      <p>Every moment with you...</p>
+    </div>
+  </div>
+  <script>
+    const music = document.getElementById('bgMusic'); let isPlaying=false;
+    function togglePlay(){isPlaying?music.pause():music.play();isPlaying=!isPlaying;}
+    function showLetter(){document.getElementById('letter').classList.add('show');}
+  </script>
+</body>
+</html>
